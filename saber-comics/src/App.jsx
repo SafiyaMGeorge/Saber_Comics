@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home';
 import Library from './pages/Library';
 import Details from './pages/Details';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 function AppContent(){
   return(
     <>
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/library' element={<Library />} />
