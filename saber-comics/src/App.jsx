@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Library from './pages/Library';
 import Details from './pages/Details';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function AppContent(){
         <Route path='/library' element={<Library />} />
         <Route path='/details' element={<Details />} />
       </Routes>
+      <Footer />
     </>
   )
 }
