@@ -2,7 +2,9 @@ import React from "react";
 
 function Home(){
     return(
-        <p>This is the home page</p>
+        <div className="h-screen">
+            This is the home page
+        </div>
     );
 }
 export default Home;
