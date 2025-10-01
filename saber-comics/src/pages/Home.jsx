@@ -2,6 +2,8 @@ import React from "react";
 import hero from "../assets/aesthetic-anime-character.jpg";
 import Button from "../components/Button";
 import Genre from "../components/Genretab";
+import Cards from "../components/Cards";
+import data from "../data/covers"
 function Home(){
     return(
         <div className="h-screen">
@@ -18,8 +20,13 @@ function Home(){
                 <Genre type='' />
                 <Genre type='' />
             </section>
-            <section className="updates">
-                <p>This is the updates section</p>
+            <section className="updates w-full h-150 flex-col justify-items-center bg-amber-200">
+                <h1 className="py-4">Updates</h1>
+                <div className="w-full px-8 flex justify-between">
+                    {data.map(covers =>(
+                        <Cards image={covers.image} title={covers.title} key={covers.id} path={covers.path}/>
+                    ))}
+                </div>
             </section>
         </div>
     );
